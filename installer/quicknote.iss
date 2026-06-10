@@ -9,7 +9,7 @@ AppVersion={#AppVersion}
 AppPublisher={#AppPublisher}
 DefaultDirName={autopf}\{#AppName}
 DefaultGroupName={#AppName}
-OutputDir=dist
+OutputDir={#SourcePath}\..\dist
 OutputBaseFilename=QuickNote-Setup-{#AppVersion}
 Compression=lzma2
 SolidCompression=yes
@@ -25,7 +25,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional icons:"
 
 [Files]
-Source: "dist\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#SourcePath}\..\dist\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExeName}"
